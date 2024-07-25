@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>金砢鈺撰</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<div id="id01" class="modal">
+    <form class="modal-content animate">
+        <h1>採砢</h1>
+        <hr>
+        <div>
+            <h2>testing</h2>
+        </div>
+    </form>
+</div>
+<div id="id02" class="modal">
+    <form class="modal-content animate">
+        <h1>剝砢</h1>
+        <hr>
+        <div>
+            <h2>testing</h2>
+        </div>
+    </form>
+</div>
+<body>
+    <div style="height: 5vw;">
+        <h1>金砢鈺撰</h1>
+    </div>
+    <div class="menu_block">
+        <div class="menu" onclick="ShowPick()">
+            <h2>採砢</h2>
+        </div>
+        <div class="menu" onclick="ShowPeel()">
+            <h2>剝砢</h2>
+            <img src="img/peeling1.png">
+        </div>
+        <div class="menu">
+            <h2>石砢料理</h2>
+        </div>
+        <div class="menu" onclick="">
+            <h2>關於石砢</h2>
+        </div>
+        <div class="menu">
+            <h2>砢農介紹</h2>
+        </div>
+        <div class="menu">
+            <h2>潮汐時間表</h2>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    var modal2 = document.getElementById('id02');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal || event.target == modal2 ){//|| event.target == modal3 || event.target == modal4) {
+            modal.style.display = "none";
+            modal2.style.display = "none";
+            // modal3.style.display = "none";
+            // modal4.style.display = "none";
+        }
+    }
+</script>
+
+</html>
