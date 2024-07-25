@@ -1,5 +1,15 @@
 body{
     text-align: center;
+    background-color: #a5a5a5;
+}
+
+img{
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: #fff;
+    width: 15vw;
+    height: 15vw;
 }
 
 .menu_block{
@@ -73,4 +83,11 @@ body{
     padding: 15px 25px 15px 25px;
     width: fit-content;
     text-align: center;
+}
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    align-content: center;
+    background: gray;
 }
