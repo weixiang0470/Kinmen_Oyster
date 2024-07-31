@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於石蚵</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <style>
+        h1{
+            font-family: 'Muli', sans-serif;
+            font-weight: 600;
+            font-size: 3.2rem;
+        }
+        @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: "Muli", sans-serif;
+}
+
+h1 {
+  margin: 50px 0 30px;
+  text-align: center;
+}
+
+.faq-container {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.faq {
+  background-color: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  margin: 20px 0;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::before,
+.faq.active::after {
+  color: #2ecc71;
+  content: "\f075";
+  font-family: "Font Awesome 6 Free";
+  font-size: 7rem;
+  left: 20px;
+  opacity: 0.2;
+  position: absolute;
+  top: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: #3498db;
+  left: -30px;
+  top: -10px;
+  transform: rotateY(180deg);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  height: 30px;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 30px;
+}
+.faq-toggle .fa-times,
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  color: #fff;
+  display: block;
+}
+
+.faq-toggle .fa-chevron-down {
+  display: block;
+}
+
+.faq.active .faq-toggle {
+  background-color: #9fa4a8;
+}
+    </style>
+    <div style="text-align:center">
+        <h1>石蚵小知識</h1>
+    </div>
+    <div class="faq-container">
+        <div class="faq active">
+          <h3 class="faq-title">Why shouldn't we trust atoms?</h3>
+          <p class="faq-text">They make up everything</p>
+          <button class="faq-toggle">
+            <i class="fa fa-chevron-down"></i>
+            
+          </button>
+        </div>
+        <div class="faq">
+          <h3 class="faq-title">What do you call someone with no body and no nose?</h3>
+          <p class="faq-text">Nobody knows.</p>
+          <button class="faq-toggle">
+            <i class="fa fa-chevron-down"></i>
+          </button>
+        </div>
+        <div class="faq">
+          <h3 class="faq-title">What's the object-oriented way to become wealthy?</h3>
+          <p class="faq-text">Inheritance.</p>
+          <button class="faq-toggle">
+            <i class="fa fa-chevron-down"></i>
+          </button>
+        </div>
+        <div class="faq">
+          <h3 class="faq-title">How many tickles does it take to tickle an octopus?</h3>
+          <p class="faq-text">Ten-tickles!</p>
+          <button class="faq-toggle">
+            <i class="fa fa-chevron-down"></i>
+          </button>
+        </div>
+        <div class="faq">
+          <h3 class="faq-title">What is: 1 + 1?</h3>
+          <p class="faq-text">Depends on who are you asking.</p>
+          <button class="faq-toggle">
+            <i class="fa fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+      
+</body>
+<script>
+    const toggles = document.querySelectorAll(".faq-toggle");
+
+toggles.forEach((toggle) => {
+toggle.addEventListener("click", () => {
+toggle.parentElement.classList.toggle("active");
+});
+});
+  </script>
+</html>
