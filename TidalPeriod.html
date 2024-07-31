@@ -6,6 +6,129 @@
     <title>潮汐</title>
 </head>
 <body>
+    <style>
+        h1{
+            font-family: 'Muli', sans-serif;
+            font-weight: 600;
+            font-size: 3.2rem;
+        }
+        p {
+            position: relative;
+            font-size: 24px;
+            font-weight: 500;
+            padding-left: 45px;
+            z-index: 2;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        ::before{
+            box-sizing: border-box;
+        }
+        p:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 0;
+            width: 25px;
+            height: 3px;
+            background-color: #000000;
+        }
+
+
+
+
+.btn {
+  border: 1px solid;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+  font-size:large;
+}
+
+.btn .text {
+  background: #fff;
+  color: #000;
+  display: grid;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn:hover .text {
+  transform: translateY(100%);
+}
+
+.btn .letters {
+  display: inline-flex;
+}
+
+.btn span {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+
+.btn span:nth-child(2n) {
+  transform: translateY(15px);
+}
+
+.btn:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn:hover span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.btn:hover span:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.btn:hover span:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.btn:hover span:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.btn:hover span:nth-child(6) {
+  transition-delay: 0.5s;
+}
+
+    </style>
+    <div style="text-align:center">
+        <h1>潮汐時間表</h1>
+    </div>
+    <div class="text">
+        <h2 style="color:red; font-size:2rem; padding-left:15px;">潮汐時間是什麽時間呢？？？</h2>
+        <h2>金門的潮汐屬半日潮，漲潮及退潮每日延後48分鐘</h2>
+        <p><strong>大流</strong>：農曆每月初二。十七日的<strong>12：03</strong>及<strong>06：27</strong>稱大流。</p>
+        <p><strong>小流</strong>：農曆每月初七，二十二日的<strong>04：03，10：27</strong>及初八，二十三日<strong>04：51，11：15</strong>稱小流。</p>
+    </div>
     
+    <button class="btn">
+        
+    <a href="https://www.cwa.gov.tw/V8/C/M/tide.html?NSeaID=NSea16" target="_blank">
+        <div class="text">詳細時間表</div>     
+        <div class="letters">     
+          <span>詳</span>
+          <span>細</span>
+          <span>時</span>
+          <span>間</span>
+          <span>表</span>
+        </div>
+    </a>
+      </button>
+   
+
 </body>
 </html>
