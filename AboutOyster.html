@@ -20,8 +20,12 @@
 }
 
 body {
-  background-color: #f0f0f0;
+  background-image: url("img/temple.png");
   font-family: "Muli", sans-serif;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
@@ -34,8 +38,10 @@ h1 {
   max-width: 600px;
 }
 
-.faq {
-  background-color: transparent;
+.faq{
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4);
+  color:white;
   border: 1px solid #9fa4a8;
   border-radius: 10px;
   margin: 20px 0;
@@ -44,10 +50,16 @@ h1 {
   position: relative;
   transition: 0.3s ease;
 }
+.faq img{
+  height: 100%;
+  width: 100%;
+}
+
 
 .faq.active {
   background-color: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color:black;
 }
 
 .faq.active::before,
@@ -85,7 +97,7 @@ h1 {
 
 .faq-toggle {
   align-items: center;
-  background-color: transparent;
+  background-color: white;
   border: 0;
   border-radius: 50%;
   cursor: pointer;
@@ -116,43 +128,60 @@ h1 {
 .faq.active .faq-toggle {
   background-color: #9fa4a8;
 }
+
     </style>
     <div style="text-align:center">
-        <h1>石蚵小知識</h1>
+        <h1 style="color:white">石蚵小知識</h1>
     </div>
     <div class="faq-container">
         <div class="faq active">
-          <h3 class="faq-title">Why shouldn't we trust atoms?</h3>
-          <p class="faq-text">They make up everything</p>
+          <h3 class="faq-title">石蚵特徵是什麽？</h3>
+          <p class="faq-text">
+            牡蠣屬海產軟體動物的雙殼貝類。有左右兩個不等的貝殼，以韌帶和閉殼肌相連。外套痕不明顯，成體無足和足絲，鰓與外套膜相結合。貝殼的形狀因環境的影響也有一些變化，但同種牡蠣的外部形態基本是一致的
+          </p>
+          <p class="faq-text">左殼又稱下殼，右殼又稱上殼，左殼稍大而色深，並固着在它物上，右殼平，稍小似蓋，貝殼表面生有鱗片，鉸合部無齒，有時具有結節狀小齒。內韌帶，閉殼肌位於中央或後方.</p>
           <button class="faq-toggle">
             <i class="fa fa-chevron-down"></i>
             
           </button>
         </div>
         <div class="faq">
-          <h3 class="faq-title">What do you call someone with no body and no nose?</h3>
-          <p class="faq-text">Nobody knows.</p>
+          <h3 class="faq-title">牡蠣內部構造?</h3>
+          <p class="faq-text">
+          <img class="image" src="img/35434.jpg">
+        </p>
           <button class="faq-toggle">
             <i class="fa fa-chevron-down"></i>
           </button>
         </div>
         <div class="faq">
-          <h3 class="faq-title">What's the object-oriented way to become wealthy?</h3>
-          <p class="faq-text">Inheritance.</p>
+          <h3 class="faq-title">石蚵和生蠔是一樣的嗎？</h3>
+          <p class="faq-text">蚵普知識一：鮮蚵、牡蠣、生蠔一家親</p>
+          <p class="faq-text"> 而之所以會有不同的稱呼，則源自於不同地區的慣用叫法，閩南語地區稱之為蚵仔、粵語地區稱之為蠔，但其實它們都屬同類。.</p>
+          <button class="faq-toggle">
+            <i class="fa fa-chevron-down"></i>
+          </button>
+        </div>
+        
+        <div class="faq">
+          <h3 class="faq-title">金門石蚵跟台灣石蚵有什麽不一樣?</h3>
+          <p class="faq-text">因養殖方式的差異，金門石蚵口感不同於台灣，體型小但也更為Ｑ彈有勁</p>
+          <p class="faq-text">金門的石蚵是長在石頭上面的，跟台灣養在蚵棚上面的不一樣.</p>
           <button class="faq-toggle">
             <i class="fa fa-chevron-down"></i>
           </button>
         </div>
         <div class="faq">
-          <h3 class="faq-title">How many tickles does it take to tickle an octopus?</h3>
-          <p class="faq-text">Ten-tickles!</p>
+          <h3 class="faq-title">為什麼金門的蚵仔會叫作石蚵?</h3>
+          <p class="faq-text">金門傳統養蚵的方法，是讓蚵苗附著在人工豎立的石條上金門蚵田是以石條養殖，該方法相傳緣起於明萬曆年間，至今已二百多年。 </p>
+          <p class="faq-text"> 金門傳統養蚵的方法，是讓蚵苗附著在人工豎立的石條上，因此所產的蚵被稱為「石蚵.</p>
           <button class="faq-toggle">
             <i class="fa fa-chevron-down"></i>
           </button>
         </div>
         <div class="faq">
-          <h3 class="faq-title">What is: 1 + 1?</h3>
-          <p class="faq-text">Depends on who are you asking.</p>
+          <h3 class="faq-title">蚵殼粉可以做什麼?</h3>
+          <p class="faq-text">蚵殼粉具有豐富的礦物質，可以作為肥料，調整土壤的酸鹼質，也可以作成動物飼料，其中飼料又分成兩種，碎片狀和粉狀。 碎片狀的可以作為雞、鴨、鴿子的飼料，粉狀的適合混在豬、鰻魚等動物的飼料中食用。 林先生說，他的工廠所生產的蚵殼粉，目前多是提供給國內的幾間飼料大廠作為原料，如福壽、卜蜂等廠商，都是向他收購，另外，台塑也有向他購買蚵殼粉來製造有機肥料。 </p>
           <button class="faq-toggle">
             <i class="fa fa-chevron-down"></i>
           </button>
